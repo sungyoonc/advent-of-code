@@ -1,5 +1,5 @@
 # Advent of Code 2022
-## Day 02: Rock Paper Scissors
+## Day 03: Rucksack Reorganization
 ### Part 1:
 One Elf has the important job of loading all of the rucksacks with supplies for the jungle journey. Unfortunately, that Elf didn't quite follow the packing instructions, and so a few items now need to be rearranged.
 
