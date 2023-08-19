@@ -74,11 +74,9 @@ fn main() {
     // ------- Part 2 -------
     let mut crane = Crane::from(&data);
     for a in &mut crane.instructions {
-        let position = crane.status[a.dest - 1].len();
-        for _i in 0..a.amount {
-            let current_crate = crane.status[a.source - 1].pop().unwrap();
-            crane.status[a.dest - 1].insert(position, current_crate);
-        }
+        let len = crane.status[a.source - 1].len();
+        let mut current_crates: Vec<_> = crane.status[a.source - 1].drain((len - a.amount)..).collect();
+        crane.status[a.dest - 1].append(&mut current_crates);
     }
 
     let top_crates = crane
