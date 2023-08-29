@@ -2,7 +2,7 @@ use std::fs;
 
 fn main() {
     let data = fs::read_to_string("input.txt").expect("Failed to read line.");
-    // ------- Part 2 -------
+    // ------- Part 1 -------
     let pairs_list: Vec<Vec<Vec<i32>>> = data // split string to vectors of int
         .lines()
         .map(|x| {
